@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	
+
+	<title>Stage 2 JSON Activity</title>
+</head>
+<body>
+
+<script>  
+/*We put our script tag at the bottom of our body tag. This is because: by putting our script there, any of the rendering we do (any of the elements we produce in our body tag) are rendered to the screen in advance of running the script. That means as this script is running, we'll actually see whats on the screen. That's nice as opposed to having this blank screen waiting for something to load, then drawing the elements. The other benefit of putting our script there is that if I have elements inside the body tag that I want to access I cannot do it until they've been rendered
+
+	
+The window means, that the window which is currently open, on the loading of this window, I want the computer to run this function. The function is everything in between the first brace and the last brace.
+
+
+The function is that if the current window has access to jQuery, make an alert pop up that says "Yeah" and if it doesnt, then it makes an alert pop up that says "Doesn't work" this function was to show that the jQuery access is working. We will not need it in stage 2
+
+/*	window.onload = function() {
+	    if (window.jQuery) {  
+	        // jQuery is loaded  
+	        alert("Yeah!");
+	    } else {
+	        // jQuery is not loaded
+	        alert("Doesn't Work");
+	    }
+	}
+*/
+
+var myData = "";
+var staticUrl = 'https://raw.githubusercontent.com/ejkatz04/ejkatz04.github.io/master/Activity%202/data/Activity2data.json'; 
+
+$.getJSON(staticUrl, function(data) {
+        console.log(data)
+    });	
+
+/* staticUrl, is a variable and it is a string that is a URL link to where my data is stored.
+
+The $ is shorthand notation for accessing a jQuery function. When you see that, that is a way of saying to the computer, go to jQuery, access a function that you have, specifically the function getJSON. What that does is that it has two parameters, statucUrl (which is where the data is) and a parameter that is a function into this getJson function. What this is, is that this is a simple function that you want to execute when this getJSON function is called. In javascript, you can use functions in lots of weird ways. In this case we are passing a function as a parameter and data is the parameter associated with this function. 
+</script>
+
+</body>
+</html>

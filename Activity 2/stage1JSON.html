@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	
+
+	<title>Stage 1 JSON Activity</title>
+</head>
+<body>
+
+<script>  
+/*We put our script tag at the bottom of our body tag. This is because: by putting our script there, any of the rendering we do (any of the elements we produce in our body tag) are rendered to the screen in advance of running the script. That means as this script is running, we'll actually see whats on the screen. That's nice as opposed to having this blank screen waiting for something to load, then drawing the elements. The other benefit of putting our script there is that if I have elements inside the body tag that I want to access I cannot do it until they've been rendered
+*/
+	
+/* the window means, that the window which is currently open, on the loading of this window, I want the computer to run this function. The function is everything in between the first brace and the last brace.
+*/
+
+/* the function is that if the current window has access to jQuery, make an alert pop up that says "Yeah" and if it doesnt, then it makes an alert pop up that says "Doesn't work"
+*/ 
+	window.onload = function() {
+	    if (window.jQuery) {  
+	        // jQuery is loaded  
+	        alert("Yeah!");
+	    } else {
+	        // jQuery is not loaded
+	        alert("Doesn't Work");
+	    }
+	}
+
+</script>
+
+</body>
+</html>
